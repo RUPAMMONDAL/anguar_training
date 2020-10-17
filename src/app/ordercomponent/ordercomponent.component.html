@@ -1,0 +1,9 @@
+<div class="container maindiv">
+    <div  *ngFor="let item of cart;let i=index" class="alert alert-info" role="alert">
+       <p class="text-success h3">{{item.name}} added</p>
+       <p class="text-success h3">Price:{{item.price}}</p>
+       <button type="button" class="btn btn-danger" (click)="deleteitem(i)">Delete</button>
+
+      </div>
+
+</div>

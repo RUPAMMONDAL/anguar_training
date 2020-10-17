@@ -1,0 +1,23 @@
+ <!-- <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <a routerLink="/YourFood"  routerLinkActive="active" class="nav-link h2">Products</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+        <a routerLink="/order"  routerLinkActive="active" class="nav-link h2">Cart</a>
+    </li> 
+</ul> -->
+<div class="container maindiv">
+    <div class="alert alert-dark" role="alert">
+      <h4 class="text-center">YOURFOOD!!</h4>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Food</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/order" routerLinkActive="active">Your Order</a>
+      </li>
+      
+    </ul>
+    </div>
+    
