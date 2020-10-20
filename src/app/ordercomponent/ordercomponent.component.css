@@ -1,0 +1,10 @@
+img{
+    height: 200px;
+}
+.Badge{
+    display: block;
+}
+span{
+    float:right;
+    padding:10px 50px ;
+}

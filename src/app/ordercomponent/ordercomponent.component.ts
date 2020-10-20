@@ -7,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ordercomponent.component.html',
   styleUrls: ['./ordercomponent.component.css']
 })
-export class OrdercomponentComponent implements OnInit {
+export class OrdercomponentComponent {
    cart:Fooddetails[];
+   totalPrice:number=0;
+   length:string;
+  
   constructor(private _service:ServiceModelService) {
     this.cart=_service.getorderarray();
+    this.cart.forEach(element => {
+      this.totalPrice+=element.price;
+      //console.log(this.cart.length)
+    });
+    if(this.cart.length>0){
+     this.length="notnill"
+
+    }
+    else
+    this.length="nill";
+    
 
    }
    deleteitem(i){
@@ -19,10 +33,8 @@ export class OrdercomponentComponent implements OnInit {
 
    }
    
-
-
-  ngOnInit(): void {
-
-  }
+   
+   
+    
 
 }

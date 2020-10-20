@@ -9,7 +9,7 @@ export class ServiceModelService {
   foodarray: Fooddetails[] = [
     {
       name: "Pizza",
-      price: 300,
+      price:300,
       imgsrc: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 
     },
@@ -51,4 +51,5 @@ export class ServiceModelService {
   delfood(index){
     this.orderarray.splice(index,1);
   }
+  
 }

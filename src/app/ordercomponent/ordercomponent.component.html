@@ -1,9 +1,20 @@
 <div class="container maindiv">
+     <div  *ngIf="length==='notnill'; then thenBlock else elseBlock"></div>
+     <ng-template #thenBlock>
     <div  *ngFor="let item of cart;let i=index" class="alert alert-info" role="alert">
-       <p class="text-success h3">{{item.name}} added</p>
+        <img [src]="item.imgsrc">
+        <p class="text-success h3">{{item.name}} added to cart</p>
        <p class="text-success h3">Price:{{item.price}}</p>
-       <button type="button" class="btn btn-danger" (click)="deleteitem(i)">Delete</button>
-
+       <button type="button" class="btn btn-danger" (click)="deleteitem(i)">Remove from Cart</button>
+       
       </div>
-
+      <div class="Badge">
+      <span class="badge badge-success " >Total Price:{{totalPrice}}</span>
+      </div>
+      </ng-template>
+      <ng-template #elseBlock>
+         <div class="alert alert-info">Please Add something to Cart</div>
+      </ng-template>
+     
 </div>
+
